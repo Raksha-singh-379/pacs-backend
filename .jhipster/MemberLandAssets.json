@@ -1,0 +1,98 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100359",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "member_land_assets",
+  "fields": [
+    {
+      "fieldName": "landType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "landGatNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "landAreaInHector",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "jindagiPatrakNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "jindagiAmount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "assetLandAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valueOfLand",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "assigneeOfLand",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isInsured",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "mLLoanNo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "MemberLandAssets",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "member",
+      "relationshipName": "member",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

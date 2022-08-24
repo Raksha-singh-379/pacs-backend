@@ -1,0 +1,116 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100402",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "employement_details",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "Occupation",
+      "fieldValues": "SALARIED (Salaried),BUSINESS (Business),PROFESSIONAL (Professional),AGRICULTURE (Agriculture),PENSIONER (Pensioner)"
+    },
+    {
+      "fieldName": "employerName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "EmployementStatus",
+      "fieldValues": "REGULAR (Regular),TEMPORARY (Temporary),CONTRACT (Contract),PROBATION (Probation)"
+    },
+    {
+      "fieldName": "designation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "duration",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "employerAdd",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prevCompanyName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prevCompanyduration",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "orgType",
+      "fieldType": "OrganizationType",
+      "fieldValues": "GOVERNMENT_SECTOR (Government_Sector),PUBLIC_SECTOR (Public_Sector),PRIVATE_SECTOR (Private_Sector),LOCAL_INDUSTRY (Local_Industry)"
+    },
+    {
+      "fieldName": "businessType",
+      "fieldType": "BusinessType",
+      "fieldValues": "SOLE_PROPRIETOR (Sole_Proprietor),PARTNERSHIP (Partnership),LLP (Limited_Liability_Partnership),PVT_LTD_COMPANY (Pvt_Ltd_Company)"
+    },
+    {
+      "fieldName": "industryType",
+      "fieldType": "IndustryType",
+      "fieldValues": "MANUFACTURING (Manufacturing),SERVICE_INDUSTRY (Service_Industry),TRADING (Trading)"
+    },
+    {
+      "fieldName": "businessRegNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "compOwnerShip",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "EmployementDetails",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "member",
+      "relationshipName": "member",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

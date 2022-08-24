@@ -1,0 +1,42 @@
+{
+  "pacsBackendApp": {
+    "addressDetails": {
+      "home": {
+        "title": "Address Details",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Address Details",
+        "createOrEditLabel": "Create or edit a Address Details",
+        "notFound": "No Address Details found"
+      },
+      "created": "A new Address Details is created with identifier {{ param }}",
+      "updated": "A Address Details is updated with identifier {{ param }}",
+      "deleted": "A Address Details is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Address Details {{ id }}?"
+      },
+      "detail": {
+        "title": "Address Details"
+      },
+      "id": "ID",
+      "type": "Type",
+      "houseNo": "House No",
+      "roadName": "Road Name",
+      "landMark": "Land Mark",
+      "pincode": "Pincode",
+      "lastModified": "Last Modified",
+      "lastModifiedBy": "Last Modified By",
+      "createdBy": "Created By",
+      "createdOn": "Created On",
+      "isDeleted": "Is Deleted",
+      "freeField1": "Free Field 1",
+      "freeField2": "Free Field 2",
+      "freeField3": "Free Field 3",
+      "state": "State",
+      "district": "District",
+      "taluka": "Taluka",
+      "taluka": "Taluka",
+      "securityUser": "Security User",
+      "member": "Member"
+    }
+  }
+}

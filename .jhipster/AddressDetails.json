@@ -1,0 +1,100 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100335",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "address_details",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "AddressType",
+      "fieldValues": "CURRENT_ADDRESS (Current_Address),PERMANENT_ADDRESS (Permanent_Address),EMPLOYMENT_ADDRESS (Employment_Address)"
+    },
+    {
+      "fieldName": "houseNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "roadName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "landMark",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pincode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "AddressDetails",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "state",
+      "relationshipName": "state",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "district",
+      "relationshipName": "district",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "taluka",
+      "relationshipName": "taluka",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "village",
+      "relationshipName": "taluka",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "securityUser",
+      "relationshipName": "securityUser",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "member",
+      "relationshipName": "member",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

@@ -1,0 +1,78 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100405",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "member_crops_details",
+  "fields": [
+    {
+      "fieldName": "season",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "landType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "landGatno",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "year",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "landAreaInHector",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "memberkmpStatus",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "societyKmpStatus",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isActivate",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "MemberCropsDetails",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "member",
+      "relationshipName": "member",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

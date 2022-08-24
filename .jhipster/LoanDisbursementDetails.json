@@ -1,0 +1,73 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100409",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "loan_disbursement_details",
+  "fields": [
+    {
+      "fieldName": "disbursementDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "disbursementAmount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "disbursementNumber",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "disbursementStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paymentMode",
+      "fieldType": "PaymentMode",
+      "fieldValues": "ONLINE (Online_Payment),CASH (Cash_Payment),TRANSFER (Transfer),CHEQUE (By_Cheque),OTHERS (Other_Mode)"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "LoanDisbursementDetails",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "loanDetails",
+      "relationshipName": "loanDetails",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "loanType",
+      "otherEntityRelationshipName": "loanDisbursementDetails",
+      "relationshipName": "loanType",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

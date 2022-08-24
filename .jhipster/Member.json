@@ -1,0 +1,208 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100355",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "member",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "middleName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "memberUniqueId",
+      "fieldType": "String",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "fatherName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "motherName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "gender",
+      "fieldType": "Gender",
+      "fieldValues": "MALE (Male),FEMALE (Female),OTHER (Other)"
+    },
+    {
+      "fieldName": "dob",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mobileNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "religion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "category",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cast",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "aadharCardNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "panCardNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "passportNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "passportExpiry",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rationCard",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "residentalStatus",
+      "fieldType": "ResidentalStatus",
+      "fieldValues": "RESIDENT (Resident),NON_RESIDENT (Non_Resident),OTHER (Other)"
+    },
+    {
+      "fieldName": "maritalStatus",
+      "fieldType": "MaritalStatus",
+      "fieldValues": "MARRIED (Married),SINGLE (Single),DIVORCED (Divorced),WIDOW (Widow),OTHERS (Others)"
+    },
+    {
+      "fieldName": "familyMemberCount",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "occupation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nationality",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "noOfDependents",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "applicationDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Status",
+      "fieldValues": "CREATED (Created),DOCUMENT_VERIFIED (Document_Verified),KYC_GENREATED (KYC_Genreated),KMP_GENREATED (KMP_Genreated),LOAN_DEMAND (loan_Demand),LOAN_ACTIVE (Loan_Active),LOAN_CANCELLED (Loan_cancelled),LOAN_CLOSED (Loan_Closed)"
+    },
+    {
+      "fieldName": "boardResolutionNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "boardResolutionDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "highestQualification",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hasAdharCardVerified",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "hasPanCardVerified",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "loanStatus",
+      "fieldType": "LoanStatus",
+      "fieldValues": "RECORDED (Recorded),APPLIED (Applied),PENDING (Pending),AWAITED (Awaited),CHART_GENRATED (Chart_Genrated),APPROVED (Approved),REJECTED (Rejected),CANCELLED (cancelled),DISBURSED (Disbursed),ACTIVE (Active),CLOSED (Closed)"
+    },
+    {
+      "fieldName": "memberType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "profileStepper",
+      "fieldType": "StepperNumber",
+      "fieldValues": "STEP_1 (Step_1),STEP_2 (Step_2),STEP_3 (Step_3),STEP_4 (Step_4),STEP_5 (Step_5),STEP_6 (Step_6)"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Member",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "society",
+      "relationshipName": "society",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

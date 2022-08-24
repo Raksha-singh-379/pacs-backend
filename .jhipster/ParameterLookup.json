@@ -1,0 +1,67 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100340",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "parameter_lookup",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "ParameterLookupType",
+      "fieldValues": "ACCOUNT (Account),RELIGION (Religion),CASTE (Caste),CATEGORY (Category),FARMER (Farmer),RESOLUTION (Resolution),EXECUTIVE_TITLE (Executive_Title),BELONGING (Belonging),INVESTMENT (Investment),MEASURING_UNIT (Measuring_Unit),ACCOUNT_TYPE (Account_Type),DEPOSIT_TYPE (Deposit_Type)"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "ParameterLookup",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "society",
+      "relationshipName": "society",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

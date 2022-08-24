@@ -1,0 +1,74 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100412",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "vouchers",
+  "fields": [
+    {
+      "fieldName": "voucherDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "voucherNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "preparedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "VoucherCode",
+      "fieldValues": "LOAN (By_Loan),DEPOSIT (By_Deposit),SHARES (By_Shares),SALES (By_Sales),PURCHASE (By_Purchase),SAVINGS (By_Savings),EXPENSE (By_Expense),ASSETS (By_Assets),INVESTMENT (By_Investment)"
+    },
+    {
+      "fieldName": "narration",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "authorisedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mode",
+      "fieldType": "PaymentMode",
+      "fieldValues": "ONLINE (Online_Payment),CASH (Cash_Payment),TRANSFER (Transfer),CHEQUE (By_Cheque),OTHERS (Other_Mode)"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Vouchers",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}
