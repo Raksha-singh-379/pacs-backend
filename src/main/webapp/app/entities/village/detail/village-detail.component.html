@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="village">
+      <h2 data-cy="villageDetailsHeading"><span jhiTranslate="pacsBackendApp.village.detail.title">Village</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ village.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.village.villageName">Village Name</span></dt>
+        <dd>
+          <span>{{ village.villageName }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.village.deleted">Deleted</span></dt>
+        <dd>
+          <span>{{ village.deleted }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.village.lgdCode">Lgd Code</span></dt>
+        <dd>
+          <span>{{ village.lgdCode }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.village.lastModified">Last Modified</span></dt>
+        <dd>
+          <span>{{ village.lastModified | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.village.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+          <span>{{ village.lastModifiedBy }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/village', village.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

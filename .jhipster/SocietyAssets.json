@@ -1,0 +1,75 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100341",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "society_assets",
+  "fields": [
+    {
+      "fieldName": "societyAssetsName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "SocietyAssetsType",
+      "fieldValues": "EQUIPMENT (Equipment),FURNITURE (Furniture)"
+    },
+    {
+      "fieldName": "category",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "depreciation",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "SocietyAssets",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "society",
+      "relationshipName": "society",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

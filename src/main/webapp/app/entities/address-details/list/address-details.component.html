@@ -1,0 +1,196 @@
+<div>
+  <h2 id="page-heading" data-cy="AddressDetailsHeading">
+    <span jhiTranslate="pacsBackendApp.addressDetails.home.title">Address Details</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="pacsBackendApp.addressDetails.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-address-details"
+        [routerLink]="['/address-details/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="pacsBackendApp.addressDetails.home.createLabel"> Create a new Address Details </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <jhi-filter [filters]="filters" (filterChange)="navigateToWithComponentValues()"></jhi-filter>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="addressDetails?.length === 0">
+    <span jhiTranslate="pacsBackendApp.addressDetails.home.notFound">No Address Details found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="addressDetails && addressDetails.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="navigateToWithComponentValues()">
+          <th scope="col" jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="type">
+            <span jhiTranslate="pacsBackendApp.addressDetails.type">Type</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="houseNo">
+            <span jhiTranslate="pacsBackendApp.addressDetails.houseNo">House No</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="roadName">
+            <span jhiTranslate="pacsBackendApp.addressDetails.roadName">Road Name</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="landMark">
+            <span jhiTranslate="pacsBackendApp.addressDetails.landMark">Land Mark</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="pincode">
+            <span jhiTranslate="pacsBackendApp.addressDetails.pincode">Pincode</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="lastModified">
+            <span jhiTranslate="pacsBackendApp.addressDetails.lastModified">Last Modified</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="lastModifiedBy">
+            <span jhiTranslate="pacsBackendApp.addressDetails.lastModifiedBy">Last Modified By</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="createdBy">
+            <span jhiTranslate="pacsBackendApp.addressDetails.createdBy">Created By</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="createdOn">
+            <span jhiTranslate="pacsBackendApp.addressDetails.createdOn">Created On</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="isDeleted">
+            <span jhiTranslate="pacsBackendApp.addressDetails.isDeleted">Is Deleted</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="freeField1">
+            <span jhiTranslate="pacsBackendApp.addressDetails.freeField1">Free Field 1</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="freeField2">
+            <span jhiTranslate="pacsBackendApp.addressDetails.freeField2">Free Field 2</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="freeField3">
+            <span jhiTranslate="pacsBackendApp.addressDetails.freeField3">Free Field 3</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="state.id">
+            <span jhiTranslate="pacsBackendApp.addressDetails.state">State</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="district.id">
+            <span jhiTranslate="pacsBackendApp.addressDetails.district">District</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="taluka.id">
+            <span jhiTranslate="pacsBackendApp.addressDetails.taluka">Taluka</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="taluka.id">
+            <span jhiTranslate="pacsBackendApp.addressDetails.taluka">Taluka</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="securityUser.id">
+            <span jhiTranslate="pacsBackendApp.addressDetails.securityUser">Security User</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="member.id">
+            <span jhiTranslate="pacsBackendApp.addressDetails.member">Member</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let addressDetails of addressDetails; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/address-details', addressDetails.id, 'view']">{{ addressDetails.id }}</a>
+          </td>
+          <td jhiTranslate="{{ 'pacsBackendApp.AddressType.' + addressDetails.type }}">{{ addressDetails.type }}</td>
+          <td>{{ addressDetails.houseNo }}</td>
+          <td>{{ addressDetails.roadName }}</td>
+          <td>{{ addressDetails.landMark }}</td>
+          <td>{{ addressDetails.pincode }}</td>
+          <td>{{ addressDetails.lastModified | formatMediumDatetime }}</td>
+          <td>{{ addressDetails.lastModifiedBy }}</td>
+          <td>{{ addressDetails.createdBy }}</td>
+          <td>{{ addressDetails.createdOn | formatMediumDatetime }}</td>
+          <td>{{ addressDetails.isDeleted }}</td>
+          <td>{{ addressDetails.freeField1 }}</td>
+          <td>{{ addressDetails.freeField2 }}</td>
+          <td>{{ addressDetails.freeField3 }}</td>
+          <td>
+            <div *ngIf="addressDetails.state">
+              <a [routerLink]="['/state', addressDetails.state.id, 'view']">{{ addressDetails.state?.id }}</a>
+            </div>
+          </td>
+          <td>
+            <div *ngIf="addressDetails.district">
+              <a [routerLink]="['/district', addressDetails.district.id, 'view']">{{ addressDetails.district?.id }}</a>
+            </div>
+          </td>
+          <td>
+            <div *ngIf="addressDetails.taluka">
+              <a [routerLink]="['/taluka', addressDetails.taluka.id, 'view']">{{ addressDetails.taluka?.id }}</a>
+            </div>
+          </td>
+          <td>
+            <div *ngIf="addressDetails.taluka">
+              <a [routerLink]="['/village', addressDetails.taluka.id, 'view']">{{ addressDetails.taluka?.id }}</a>
+            </div>
+          </td>
+          <td>
+            <div *ngIf="addressDetails.securityUser">
+              <a [routerLink]="['/security-user', addressDetails.securityUser.id, 'view']">{{ addressDetails.securityUser?.id }}</a>
+            </div>
+          </td>
+          <td>
+            <div *ngIf="addressDetails.member">
+              <a [routerLink]="['/member', addressDetails.member.id, 'view']">{{ addressDetails.member?.id }}</a>
+            </div>
+          </td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/address-details', addressDetails.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/address-details', addressDetails.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(addressDetails)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="addressDetails && addressDetails.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [page]="page"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="navigateToPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

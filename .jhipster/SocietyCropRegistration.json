@@ -1,0 +1,75 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100349",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "society_crop_registration",
+  "fields": [
+    {
+      "fieldName": "cropName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "monthDuration",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "season",
+      "fieldType": "Season",
+      "fieldValues": "KHARIP (Kharip),RABBI (Rabbi),HANGAMI (Hangami)"
+    },
+    {
+      "fieldName": "cropLimit",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "year",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "SocietyCropRegistration",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "society",
+      "relationshipName": "society",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

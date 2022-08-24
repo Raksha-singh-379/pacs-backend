@@ -1,0 +1,90 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100343",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "society_assets_data",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "balanceQuantity",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "balanceValue",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "billNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cost",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "transactionType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "transactionDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "SocietyAssetsData",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "societyAssets",
+      "relationshipName": "societyAssets",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

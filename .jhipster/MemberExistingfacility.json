@@ -1,0 +1,100 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100401",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "member_existingfacility",
+  "fields": [
+    {
+      "fieldName": "year",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "facilityName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "facilitatedFrom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nature",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "amtInLac",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "purpose",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sectionDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "outstandingInLac",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "FacilityStatus",
+      "fieldValues": "REGULAR (Regular),OVERDUE (OverDue),NPA (Npa)"
+    },
+    {
+      "fieldName": "rating",
+      "fieldType": "CreditRating",
+      "fieldValues": "OUTSTANDING (Outstanding),GOOD (Good),FAIR (Fair),POOR (Poor)"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "MemberExistingfacility",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "member",
+      "relationshipName": "member",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

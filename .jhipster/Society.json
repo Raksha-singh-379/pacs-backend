@@ -1,0 +1,97 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100334",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "society",
+  "fields": [
+    {
+      "fieldName": "societyName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "registrationNumber",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "gstinNumber",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "panNumber",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "tanNumber",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "emailAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActivate",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Society",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "addressDetails",
+      "ownerSide": true,
+      "relationshipName": "addressDetails",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "society",
+      "relationshipName": "society",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

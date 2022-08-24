@@ -1,0 +1,66 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100351",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "expenditure_type",
+  "fields": [
+    {
+      "fieldName": "expenditureDesc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "expenditureType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "expenditureCategory",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "ExpenditureType",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "society",
+      "relationshipName": "society",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

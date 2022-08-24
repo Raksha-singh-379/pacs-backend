@@ -1,0 +1,71 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100356",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "documents",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "DocumentType",
+      "fieldValues": "PROFILE_PICTURE (Profile_Picture),SIGNATURE (Signature),JINDAGI_PATRAK (Jindagi_Patrak),EIGHT_A (Eight_A),SAAT_BARA (Saat_Bara),AADHAR (Aadhar_Card),PAN_CARD (Pan_Card),SOCIETY_LOGO (Society_logo),LOGO_AG_LOAN (Logo_Ag_Loan),LOGO_HOME_LOAN (Logo_Hm_Loan),LOGO_VEH_LOAN (Logo_Veh_Loan),LOGO_PER_LOAN (Logo_Per_Loan),LOGO_GOLD_LOAN (Logo_Gold_Loan),ASSET_DOC (Assets_Document),MONTHLY_MEETING (Monthly_meeting),MOM_file (MOM_file),DHORAN_DOC (Dhoran_document),GR_DOC (GR_Document),OTHER (Other)"
+    },
+    {
+      "fieldName": "fileName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "filePath",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fileUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Documents",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "member",
+      "relationshipName": "member",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

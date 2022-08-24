@@ -1,0 +1,49 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100414",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "vouchers_history",
+  "fields": [
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "voucherDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "VoucherCode",
+      "fieldValues": "LOAN (By_Loan),DEPOSIT (By_Deposit),SHARES (By_Shares),SALES (By_Sales),PURCHASE (By_Purchase),SAVINGS (By_Savings),EXPENSE (By_Expense),ASSETS (By_Assets),INVESTMENT (By_Investment)"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "VouchersHistory",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

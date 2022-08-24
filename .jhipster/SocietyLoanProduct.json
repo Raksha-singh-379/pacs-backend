@@ -1,0 +1,166 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100353",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "society_loan_product",
+  "fields": [
+    {
+      "fieldName": "productName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accHeadCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "parentAccHeadCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "resolutionDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "resolutionNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "unitSize",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "validFrom",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "validTo",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "interestRate",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "maxLoanAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "borrowingInterestRate",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "penaltyInterest",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "surcharge",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "loanDuration",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "numberOFInstallment",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "extendedInterstRate",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "centralGovSubsidyInterest",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "distBankSubsidyInterest",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "borrowerInterest",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "stateGovSubsidyInterest",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "year",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActivate",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "SocietyLoanProduct",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "society",
+      "relationshipName": "society",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "bankDhoranDetails",
+      "relationshipName": "bankDhoranDetails",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "ledgerAccounts",
+      "relationshipName": "ledgerAccounts",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "loanType",
+      "otherEntityRelationshipName": "societyLoanProduct",
+      "relationshipName": "loanType",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

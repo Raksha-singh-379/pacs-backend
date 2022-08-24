@@ -1,0 +1,116 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="addressDetails">
+      <h2 data-cy="addressDetailsDetailsHeading"><span jhiTranslate="pacsBackendApp.addressDetails.detail.title">Address Details</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ addressDetails.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.type">Type</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'pacsBackendApp.AddressType.' + addressDetails.type }}">{{ addressDetails.type }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.houseNo">House No</span></dt>
+        <dd>
+          <span>{{ addressDetails.houseNo }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.roadName">Road Name</span></dt>
+        <dd>
+          <span>{{ addressDetails.roadName }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.landMark">Land Mark</span></dt>
+        <dd>
+          <span>{{ addressDetails.landMark }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.pincode">Pincode</span></dt>
+        <dd>
+          <span>{{ addressDetails.pincode }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.lastModified">Last Modified</span></dt>
+        <dd>
+          <span>{{ addressDetails.lastModified | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+          <span>{{ addressDetails.lastModifiedBy }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.createdBy">Created By</span></dt>
+        <dd>
+          <span>{{ addressDetails.createdBy }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.createdOn">Created On</span></dt>
+        <dd>
+          <span>{{ addressDetails.createdOn | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.isDeleted">Is Deleted</span></dt>
+        <dd>
+          <span>{{ addressDetails.isDeleted }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.freeField1">Free Field 1</span></dt>
+        <dd>
+          <span>{{ addressDetails.freeField1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.freeField2">Free Field 2</span></dt>
+        <dd>
+          <span>{{ addressDetails.freeField2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.freeField3">Free Field 3</span></dt>
+        <dd>
+          <span>{{ addressDetails.freeField3 }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.state">State</span></dt>
+        <dd>
+          <div *ngIf="addressDetails.state">
+            <a [routerLink]="['/state', addressDetails.state.id, 'view']">{{ addressDetails.state?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.district">District</span></dt>
+        <dd>
+          <div *ngIf="addressDetails.district">
+            <a [routerLink]="['/district', addressDetails.district.id, 'view']">{{ addressDetails.district?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.taluka">Taluka</span></dt>
+        <dd>
+          <div *ngIf="addressDetails.taluka">
+            <a [routerLink]="['/taluka', addressDetails.taluka.id, 'view']">{{ addressDetails.taluka?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.taluka">Taluka</span></dt>
+        <dd>
+          <div *ngIf="addressDetails.taluka">
+            <a [routerLink]="['/village', addressDetails.taluka.id, 'view']">{{ addressDetails.taluka?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.securityUser">Security User</span></dt>
+        <dd>
+          <div *ngIf="addressDetails.securityUser">
+            <a [routerLink]="['/security-user', addressDetails.securityUser.id, 'view']">{{ addressDetails.securityUser?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.addressDetails.member">Member</span></dt>
+        <dd>
+          <div *ngIf="addressDetails.member">
+            <a [routerLink]="['/member', addressDetails.member.id, 'view']">{{ addressDetails.member?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/address-details', addressDetails.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

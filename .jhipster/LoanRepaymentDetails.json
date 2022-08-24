@@ -1,0 +1,91 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100410",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "loan_repayment_details",
+  "fields": [
+    {
+      "fieldName": "repaymentDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "totalRepaymentAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "installmentNumber",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "principlePaidAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "interestPaidAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "surChargeAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "overDueAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "balanceInterestAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "balancePrincipleAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "paymentMode",
+      "fieldType": "PaymentMode",
+      "fieldValues": "ONLINE (Online_Payment),CASH (Cash_Payment),TRANSFER (Transfer),CHEQUE (By_Cheque),OTHERS (Other_Mode)"
+    },
+    {
+      "fieldName": "foreClosureChargeAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "LoanRepaymentDetails",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "loanDetails",
+      "relationshipName": "loanDetails",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
