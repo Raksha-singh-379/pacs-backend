@@ -1,0 +1,82 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100739",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "income_details",
+  "fields": [
+    {
+      "fieldName": "year",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "grossIncome",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "expenses",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "netIncome",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "paidTaxes",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "cashSurplus",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "IncomeDetails",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "member",
+      "relationshipName": "member",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

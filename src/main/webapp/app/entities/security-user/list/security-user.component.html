@@ -1,0 +1,172 @@
+<div>
+  <h2 id="page-heading" data-cy="SecurityUserHeading">
+    <span jhiTranslate="pacsBackendApp.securityUser.home.title">Security Users</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="pacsBackendApp.securityUser.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-security-user"
+        [routerLink]="['/security-user/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="pacsBackendApp.securityUser.home.createLabel"> Create a new Security User </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <jhi-filter [filters]="filters" (filterChange)="navigateToWithComponentValues()"></jhi-filter>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="securityUsers?.length === 0">
+    <span jhiTranslate="pacsBackendApp.securityUser.home.notFound">No Security Users found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="securityUsers && securityUsers.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="navigateToWithComponentValues()">
+          <th scope="col" jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="firstName">
+            <span jhiTranslate="pacsBackendApp.securityUser.firstName">First Name</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="lastName">
+            <span jhiTranslate="pacsBackendApp.securityUser.lastName">Last Name</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="designation">
+            <span jhiTranslate="pacsBackendApp.securityUser.designation">Designation</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="username">
+            <span jhiTranslate="pacsBackendApp.securityUser.username">Username</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="passwordHash">
+            <span jhiTranslate="pacsBackendApp.securityUser.passwordHash">Password Hash</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="email">
+            <span jhiTranslate="pacsBackendApp.securityUser.email">Email</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="description">
+            <span jhiTranslate="pacsBackendApp.securityUser.description">Description</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="department">
+            <span jhiTranslate="pacsBackendApp.securityUser.department">Department</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="imageUrl">
+            <span jhiTranslate="pacsBackendApp.securityUser.imageUrl">Image Url</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="activated">
+            <span jhiTranslate="pacsBackendApp.securityUser.activated">Activated</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="langKey">
+            <span jhiTranslate="pacsBackendApp.securityUser.langKey">Lang Key</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="activationKey">
+            <span jhiTranslate="pacsBackendApp.securityUser.activationKey">Activation Key</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="resetKey">
+            <span jhiTranslate="pacsBackendApp.securityUser.resetKey">Reset Key</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="resetDate">
+            <span jhiTranslate="pacsBackendApp.securityUser.resetDate">Reset Date</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="mobileNo">
+            <span jhiTranslate="pacsBackendApp.securityUser.mobileNo">Mobile No</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="createdBy">
+            <span jhiTranslate="pacsBackendApp.securityUser.createdBy">Created By</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="createdOn">
+            <span jhiTranslate="pacsBackendApp.securityUser.createdOn">Created On</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="society.id">
+            <span jhiTranslate="pacsBackendApp.securityUser.society">Society</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let securityUser of securityUsers; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/security-user', securityUser.id, 'view']">{{ securityUser.id }}</a>
+          </td>
+          <td>{{ securityUser.firstName }}</td>
+          <td>{{ securityUser.lastName }}</td>
+          <td>{{ securityUser.designation }}</td>
+          <td>{{ securityUser.username }}</td>
+          <td>{{ securityUser.passwordHash }}</td>
+          <td>{{ securityUser.email }}</td>
+          <td>{{ securityUser.description }}</td>
+          <td>{{ securityUser.department }}</td>
+          <td>{{ securityUser.imageUrl }}</td>
+          <td>{{ securityUser.activated }}</td>
+          <td>{{ securityUser.langKey }}</td>
+          <td>{{ securityUser.activationKey }}</td>
+          <td>{{ securityUser.resetKey }}</td>
+          <td>{{ securityUser.resetDate | formatMediumDatetime }}</td>
+          <td>{{ securityUser.mobileNo }}</td>
+          <td>{{ securityUser.createdBy }}</td>
+          <td>{{ securityUser.createdOn | formatMediumDatetime }}</td>
+          <td>
+            <div *ngIf="securityUser.society">
+              <a [routerLink]="['/society', securityUser.society.id, 'view']">{{ securityUser.society?.id }}</a>
+            </div>
+          </td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/security-user', securityUser.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/security-user', securityUser.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(securityUser)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="securityUsers && securityUsers.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [page]="page"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="navigateToPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

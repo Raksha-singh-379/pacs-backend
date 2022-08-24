@@ -1,0 +1,83 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100737",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "member_assets",
+  "fields": [
+    {
+      "fieldName": "assetAmount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "assetType",
+      "fieldType": "AssetType",
+      "fieldValues": "FARM_MACHINERY (Farm_Machinery),HOUSE (House),OTHERS (Others)"
+    },
+    {
+      "fieldName": "assetArea",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "assetAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numberOfAssets",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "isInsured",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "MemberAssets",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "member",
+      "relationshipName": "member",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

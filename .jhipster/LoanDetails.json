@@ -1,0 +1,176 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100746",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "loan_details",
+  "fields": [
+    {
+      "fieldName": "loanAmount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "loanAccountNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "LoanStatus",
+      "fieldValues": "RECORDED (Recorded),APPLIED (Applied),PENDING (Pending),AWAITED (Awaited),CHART_GENRATED (Chart_Genrated),APPROVED (Approved),REJECTED (Rejected),CANCELLED (cancelled),DISBURSED (Disbursed),ACTIVE (Active),CLOSED (Closed)"
+    },
+    {
+      "fieldName": "loanStartDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "loanEndDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "loanPlannedClosureDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "loanCloserDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "loanEffectiveDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "loanClassification",
+      "fieldType": "NpaClassification",
+      "fieldValues": "SUB_STANDARD_ASSESTS (Sub_Standard_Assets),DOUBTFUL_1 (Doubtful_1),DOUBTFUL_2 (Doubtful_2),DOUBTFUL_3 (Doubtful_3),SUB_STANDARD (Sub_Standard),STANDARD (Standard)"
+    },
+    {
+      "fieldName": "resolutionNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "resolutionDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isInsured",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "costOfInvestment",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "loanBenefitingArea",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "dccbLoanNo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "mortgageDeedNo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "mortgageDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "extentMorgageValue",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "parentAccHeadCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "loanAccountName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "disbursementAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "disbursementStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "year",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField5",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "LoanDetails",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "loanDemand",
+      "ownerSide": true,
+      "relationshipName": "loanDemand",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "member",
+      "relationshipName": "member",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "societyCropRegistration",
+      "relationshipName": "societyCropRegistration",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "loanDemand",
+      "relationshipName": "loanDemand",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "societyLoanProduct",
+      "relationshipName": "societyLoanProduct",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "bankDhoranDetails",
+      "relationshipName": "bankDhoranDetails",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "loanType",
+      "otherEntityRelationshipName": "loanDetails",
+      "relationshipName": "loanType",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
