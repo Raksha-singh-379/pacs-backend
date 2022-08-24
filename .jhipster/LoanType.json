@@ -1,0 +1,109 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100733",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "loan_type",
+  "fields": [
+    {
+      "fieldName": "loanName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "decription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "offer",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "LoanType",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "societyPrerequisite",
+      "otherEntityRelationshipName": "loanType",
+      "relationshipName": "societyPrerequisite",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "societyLoanProduct",
+      "otherEntityRelationshipName": "loanType",
+      "relationshipName": "societyLoanProduct",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "loanDemand",
+      "otherEntityRelationshipName": "loanType",
+      "relationshipName": "loanDemand",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "loanDetails",
+      "otherEntityRelationshipName": "loanType",
+      "relationshipName": "loanDetails",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "loanDisbursementDetails",
+      "otherEntityRelationshipName": "loanType",
+      "relationshipName": "loanDisbursementDetails",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "society",
+      "relationshipName": "society",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "loanType",
+      "relationshipName": "loanType",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

@@ -1,0 +1,79 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100750",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "loan_watap_details",
+  "fields": [
+    {
+      "fieldName": "loanWatapDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "cropLandInHector",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "slotNumber",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "loanAmount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "season",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "LoanStatus",
+      "fieldValues": "RECORDED (Recorded),APPLIED (Applied),PENDING (Pending),AWAITED (Awaited),CHART_GENRATED (Chart_Genrated),APPROVED (Approved),REJECTED (Rejected),CANCELLED (cancelled),DISBURSED (Disbursed),ACTIVE (Active),CLOSED (Closed)"
+    },
+    {
+      "fieldName": "year",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "LoanWatapDetails",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "loanDemand",
+      "relationshipName": "loanDemand",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

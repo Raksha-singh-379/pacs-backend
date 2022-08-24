@@ -1,0 +1,104 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100726",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "ledger_accounts",
+  "fields": [
+    {
+      "fieldName": "accountNo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "accountName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accBalance",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "accHeadCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ledgerCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "appCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ledgerClassification",
+      "fieldType": "LedgerClassification",
+      "fieldValues": "BALANCE_SHEET (Balance_Sheet),TRADING_ACCOUNT (Trading_Account),PROFIT_AND_LOSS (Profit_And_Loss)"
+    },
+    {
+      "fieldName": "category",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "level",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "year",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accountType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "LedgerAccounts",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "society",
+      "relationshipName": "society",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "ledgerAccounts",
+      "relationshipName": "ledgerAccounts",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

@@ -1,0 +1,108 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="society">
+      <h2 data-cy="societyDetailsHeading"><span jhiTranslate="pacsBackendApp.society.detail.title">Society</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ society.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.societyName">Society Name</span></dt>
+        <dd>
+          <span>{{ society.societyName }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.registrationNumber">Registration Number</span></dt>
+        <dd>
+          <span>{{ society.registrationNumber }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.gstinNumber">Gstin Number</span></dt>
+        <dd>
+          <span>{{ society.gstinNumber }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.panNumber">Pan Number</span></dt>
+        <dd>
+          <span>{{ society.panNumber }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.tanNumber">Tan Number</span></dt>
+        <dd>
+          <span>{{ society.tanNumber }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.phoneNumber">Phone Number</span></dt>
+        <dd>
+          <span>{{ society.phoneNumber }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.emailAddress">Email Address</span></dt>
+        <dd>
+          <span>{{ society.emailAddress }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.createdOn">Created On</span></dt>
+        <dd>
+          <span>{{ society.createdOn | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.createdBy">Created By</span></dt>
+        <dd>
+          <span>{{ society.createdBy }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.description">Description</span></dt>
+        <dd>
+          <span>{{ society.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.isActivate">Is Activate</span></dt>
+        <dd>
+          <span>{{ society.isActivate }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.lastModified">Last Modified</span></dt>
+        <dd>
+          <span>{{ society.lastModified | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+          <span>{{ society.lastModifiedBy }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.freeField1">Free Field 1</span></dt>
+        <dd>
+          <span>{{ society.freeField1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.freeField2">Free Field 2</span></dt>
+        <dd>
+          <span>{{ society.freeField2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.freeField3">Free Field 3</span></dt>
+        <dd>
+          <span>{{ society.freeField3 }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.freeField4">Free Field 4</span></dt>
+        <dd>
+          <span>{{ society.freeField4 }}</span>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.addressDetails">Address Details</span></dt>
+        <dd>
+          <div *ngIf="society.addressDetails">
+            <a [routerLink]="['/address-details', society.addressDetails.id, 'view']">{{ society.addressDetails?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="pacsBackendApp.society.society">Society</span></dt>
+        <dd>
+          <div *ngIf="society.society">
+            <a [routerLink]="['/society', society.society.id, 'view']">{{ society.society?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/society', society.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

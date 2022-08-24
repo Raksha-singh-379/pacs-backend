@@ -1,0 +1,79 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100729",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "society_npa_setting",
+  "fields": [
+    {
+      "fieldName": "npaClassification",
+      "fieldType": "NpaClassification",
+      "fieldValues": "SUB_STANDARD_ASSESTS (Sub_Standard_Assets),DOUBTFUL_1 (Doubtful_1),DOUBTFUL_2 (Doubtful_2),DOUBTFUL_3 (Doubtful_3),SUB_STANDARD (Sub_Standard),STANDARD (Standard)"
+    },
+    {
+      "fieldName": "durationStart",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "durationEnd",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "provision",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "year",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "interestRate",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "SocietyNpaSetting",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "society",
+      "relationshipName": "society",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

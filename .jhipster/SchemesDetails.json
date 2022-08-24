@@ -1,0 +1,78 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100731",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "schemes_details",
+  "fields": [
+    {
+      "fieldName": "fdDurationDays",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "interest",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "lockInPeriod",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "schemeName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rdDurationMonths",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "reinvestInterest",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "SchemesDetails",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "society",
+      "relationshipName": "society",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

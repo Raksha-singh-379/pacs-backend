@@ -1,0 +1,86 @@
+{
+  "applications": "*",
+  "changelogDate": "20220824100747",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "amortization_details",
+  "fields": [
+    {
+      "fieldName": "installmentDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "totalOutstandingPrincipleAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "totalOutstandngInterestAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "paidPrincipleAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "paidInterestAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "balPrincipleAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "balInterestAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "loanEmiAmt",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "principleEMI",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "paymentStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "year",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "AmortizationDetails",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "loanDetails",
+      "relationshipName": "loanDetails",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
